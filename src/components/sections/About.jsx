@@ -1,38 +1,53 @@
 import { RevealOnScroll } from "../RevealOnScroll";
+import { 
+    SiPython, SiCplusplus, SiJavascript, 
+    SiMysql, SiMongodb, SiReact, 
+    SiNodedotjs, SiHtml5, SiCss, 
+    SiTailwindcss, SiBootstrap, SiJquery,
+    SiGit, SiGithub, SiJupyter,
+    SiCodeblocks
+} from "react-icons/si";
+import { FaJava, FaCode, FaChartBar, FaChartPie } from "react-icons/fa";
+import { VscVscode } from "react-icons/vsc";
 
 export const About = () => {
     
     const languages = [
-        "Python",
-        "C++ programming",
-        "Java",
-        "JavaScript"
+        { name: "Python", icon: <SiPython className="text-xl" /> },
+        { name: "C++", icon: <SiCplusplus className="text-xl" /> },
+        { name: "Java", icon: <FaJava className="text-xl" /> },
+        { name: "JavaScript", icon: <SiJavascript className="text-xl" /> }
     ];
+
     const databases= [
-        "SQL(MySQL)",
-        "NoSQL(MongoDB)"
+        { name: "MySQL", icon: <SiMysql className="text-xl" /> },
+        { name: "MongoDB", icon: <SiMongodb className="text-xl" /> }
     ];
+
     const webDevelopment= [
-        "React",
-        "Node.js",
-        "HTML",
-        "CSS",
-        "TailwindCSS",
-        "Bootstrap",
-        "Jquery"
+        { name: "React", icon: <SiReact className="text-xl" /> },
+        { name: "Node.js", icon: <SiNodedotjs className="text-xl" /> },
+        { name: "HTML", icon: <SiHtml5 className="text-xl" /> },
+        { name: "CSS", icon: <SiCss className="text-xl" /> },
+        { name: "TailwindCSS", icon: <SiTailwindcss className="text-xl" /> },
+        { name: "Bootstrap", icon: <SiBootstrap className="text-xl" /> },
+        { name: "Jquery", icon: <SiJquery className="text-xl" /> }
     ];
+
     const toolsPlatforms= [
-        "Git & GitHub",
-        "VS code",
-        "Tableau",
-        "PowerBi",
-        "MySQL",
-        "Jupyter Notebook"
+        { name: "Git", icon: <SiGit className="text-xl" /> },
+        { name: "GitHub", icon: <SiGithub className="text-xl" /> },
+        { name: "VS Code", icon: <VscVscode className="text-xl" /> },
+        { name: "Tableau", icon: <FaChartBar className="text-xl" /> },
+        { name: "PowerBI", icon: <FaChartPie className="text-xl" /> },
+        { name: "Jupyter", icon: <SiJupyter className="text-xl" /> }
     ];
+
     const coreFundamental=[
-        "Data Structures & Algorithms (DSA)", 
-        "Object-Oriented Programming (OOP)"
+        { name: "DSA", icon: <FaCode className="text-xl" /> },
+        { name: "OOP", icon: <SiCodeblocks className="text-xl" /> }
     ]
+
     return(
         <section
         id="about"
@@ -51,97 +66,88 @@ export const About = () => {
                     AI-driven projects with Python, OpenCV, and TensorFlow, I enjoy solving real-world 
                     problems with code.
                 </p>
-                <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
-                            Skills
+                <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent mb-4">
+                    Skills
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
-                    <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="rounded-xl p-6 hover:-translate-y-1 transition-all border border-white/5 bg-white/5">
                         <h3 className="text-xl font-bold mb-4">
                             Languages
                         </h3>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-3">
                             {languages.map((tech,key) => (
                                 <span key={key}
-                                className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
-                                hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition">
-                                    {tech}
+                                className="flex items-center gap-2 bg-blue-500/10 text-blue-400 py-1.5 px-3 rounded-full text-sm font-medium hover:bg-blue-500/20
+                                hover:shadow-[0_2px_8px_rgba(59,130,246,0.3)] hover:-translate-y-0.5 transition-all">
+                                    {tech.icon} {tech.name}
                                 </span>
                             ))}
                         </div>
-                        
                     </div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
-                    <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
+
+                    <div className="rounded-xl p-6 hover:-translate-y-1 transition-all border border-white/5 bg-white/5">
                         <h3 className="text-xl font-bold mb-4">
                             Web Development
                         </h3>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-3">
                             {webDevelopment.map((tech,key) => (
                                 <span key={key}
-                                className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
-                                hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition">
-                                    {tech}
+                                className="flex items-center gap-2 bg-blue-500/10 text-blue-400 py-1.5 px-3 rounded-full text-sm font-medium hover:bg-blue-500/20
+                                hover:shadow-[0_2px_8px_rgba(59,130,246,0.3)] hover:-translate-y-0.5 transition-all">
+                                    {tech.icon} {tech.name}
                                 </span>
                             ))}
                         </div>
-                        
                     </div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
-                    <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
+
+                    <div className="rounded-xl p-6 hover:-translate-y-1 transition-all border border-white/5 bg-white/5">
                         <h3 className="text-xl font-bold mb-4">
-                            Tools&Platforms 
+                            Tools & Platforms 
                         </h3>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-3">
                             {toolsPlatforms.map((tech,key) => (
                                 <span key={key}
-                                className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
-                                hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition">
-                                    {tech}
+                                className="flex items-center gap-2 bg-blue-500/10 text-blue-400 py-1.5 px-3 rounded-full text-sm font-medium hover:bg-blue-500/20
+                                hover:shadow-[0_2px_8px_rgba(59,130,246,0.3)] hover:-translate-y-0.5 transition-all">
+                                    {tech.icon} {tech.name}
                                 </span>
                             ))}
                         </div>
-                        
                     </div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
-                    <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
+
+                    <div className="rounded-xl p-6 hover:-translate-y-1 transition-all border border-white/5 bg-white/5">
                         <h3 className="text-xl font-bold mb-4">
                             Databases 
                         </h3>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-3">
                             {databases.map((tech,key) => (
                                 <span key={key}
-                                className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
-                                hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition">
-                                    {tech}
+                                className="flex items-center gap-2 bg-blue-500/10 text-blue-400 py-1.5 px-3 rounded-full text-sm font-medium hover:bg-blue-500/20
+                                hover:shadow-[0_2px_8px_rgba(59,130,246,0.3)] hover:-translate-y-0.5 transition-all">
+                                    {tech.icon} {tech.name}
                                 </span>
                             ))}
                         </div>
-                        
                     </div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
-                    <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
+
+                    <div className="rounded-xl p-6 hover:-translate-y-1 transition-all border border-white/5 bg-white/5 md:col-span-2">
                         <h3 className="text-xl font-bold mb-4">
-                            Core Fundamental 
+                            Core Fundamentals 
                         </h3>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-3">
                             {coreFundamental.map((tech,key) => (
                                 <span key={key}
-                                className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
-                                hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition">
-                                    {tech}
+                                className="flex items-center gap-2 bg-blue-500/10 text-blue-400 py-1.5 px-3 rounded-full text-sm font-medium hover:bg-blue-500/20
+                                hover:shadow-[0_2px_8px_rgba(59,130,246,0.3)] hover:-translate-y-0.5 transition-all">
+                                    {tech.icon} {tech.name}
                                 </span>
                             ))}
                         </div>
-                        
                     </div>
                 </div>
                 </div>
 
-                <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
+                <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all gap-6 mt-8">
                 <h3 className="text-xl font-bold mb-4"> 💼 Work Experience </h3>
                 <div className="space-y-4 text-gray-300">
                     <div>
