@@ -147,47 +147,78 @@ export const About = () => {
                 </div>
                 </div>
 
-                <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all gap-6 mt-8">
-                <h3 className="text-xl font-bold mb-4"> 💼 Work Experience </h3>
-                <div className="space-y-4 text-gray-300">
+                <div className="space-y-8 mt-12">
                     <div>
-                    <h4 className="font-bold py-2">
-                        Web Development Intern at HIIT (May–July 2024)
-                    </h4>
-                    <ul className="list-disc list-inside text-gray-300 space-y-2">
-                    <li>
-                    Developed and deployed 10+ responsive websites using HTML, CSS, jQuery, Bootstrap, and MySQL in a team of 4 interns.
-                    </li>
-                    <li>
-                    Optimized SQL queries, reducing page load time by 20% and improving application performance.
+                        <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent mb-6 flex items-center gap-2">
+                             💼 Work Experience
+                        </h3>
+                        <div className="space-y-6">
+                            <div className="p-6 rounded-xl border border-white/10 bg-white/5 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_4px_20px_rgba(59,130,246,0.1)] transition-all">
+                                <h4 className="text-xl font-bold text-white mb-1">
+                                    Web Development Intern
+                                </h4>
+                                <div className="text-blue-400 font-medium mb-3">
+                                    HIIT • May – July 2024
+                                </div>
+                                <ul className="list-disc list-inside text-gray-300 space-y-2 text-sm leading-relaxed">
+                                    <li>
+                                        Developed and deployed 10+ responsive websites using HTML, CSS, jQuery, Bootstrap, and MySQL in a team of 4 interns.
+                                    </li>
+                                    <li>
+                                        Optimized SQL queries, reducing page load time by 20% and improving application performance.
+                                    </li>
+                                    <li>
+                                        Assisted in understanding and integrating client requirements into the final product, ensuring all deliverables met expectations and deadlines.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
-                    </li>
-                    <li>
-                    Assisted in understanding and integrating client requirements into the final product, ensuring all deliverables met expectations and deadlines.
-                    </li>
-                    </ul>
+                    <div>
+                        <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent mb-6 flex items-center gap-2">
+                            🏫 Education
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
+                            <div className="p-6 rounded-xl border border-white/10 bg-white/5 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_4px_20px_rgba(59,130,246,0.1)] transition-all">
+                                <h4 className="text-xl font-bold text-white mb-1">
+                                    Bachelor of Engineering in CSE
+                                </h4>
+                                <div className="text-blue-400 font-medium mb-2">
+                                    Chandigarh University • 2021 – 2025
+                                </div>
+                                <p className="text-gray-300 text-sm">
+                                    CGPA: 7.31
+                                </p>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div className="p-6 rounded-xl border border-white/10 bg-white/5 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_4px_20px_rgba(59,130,246,0.1)] transition-all">
+                                    <h4 className="text-lg font-bold text-white mb-1">
+                                        Intermediate
+                                    </h4>
+                                    <div className="text-blue-400 font-medium mb-2">
+                                        Trident Public School • 2020 – 2021
+                                    </div>
+                                    <p className="text-gray-300 text-sm">
+                                        Percentage: 76.6%
+                                    </p>
+                                </div>
+
+                                <div className="p-6 rounded-xl border border-white/10 bg-white/5 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_4px_20px_rgba(59,130,246,0.1)] transition-all">
+                                    <h4 className="text-lg font-bold text-white mb-1">
+                                        Matriculation
+                                    </h4>
+                                    <div className="text-blue-400 font-medium mb-2">
+                                        North Point Children’s School • 2018 – 2019
+                                    </div>
+                                    <p className="text-gray-300 text-sm">
+                                        Percentage: 75.2%
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    </div>
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-1 gap-6 mt-8">
-                <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
-                <h3 className="text-xl font-bold mb-4"> 🏫 Education </h3>
-                <ul className="list-disc list-inside text-gray-300 space-y-2">
-                    <li>
-                    <strong> Bachelor of Engineering in CSE </strong> - Chandigarh University
-                    (2021–2025) | CGPA: 7.31
-                    </li>
-                    <li>
-                    <strong> Intermediate </strong> - Trident Public School
-                    (2020–2021) | Percentage: 76.6
-                    </li>
-                    <li>
-                    <strong> Matriculation </strong> - North Point Children’s School
-                    (2018–2019) | Percentage: 75.2
-                    </li>
-                </ul>
-                </div>
                 </div>
             </div>
              </RevealOnScroll>
